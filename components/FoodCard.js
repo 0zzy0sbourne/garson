@@ -8,6 +8,7 @@ import {FastFoodSuggestions, BakerySuggestions, DessertSuggestions, CoffeeSugges
 
 
 export default function FoodCard(props) {
+
     return (
 
         <ScrollView showsVerticalScrollIndicator= {false}
@@ -40,20 +41,29 @@ export default function FoodCard(props) {
                     style={{flexDirection: "column"}}
                 >
                    
-                   {FastFoodSuggestions.map((suggestion, index) => (
-                       <TouchableOpacity style={{
-                        alignItems: "center",
-                        marginRight:"30",   
-                        paddingHorizontal: 120,
-                        borderRadius: "30" 
-                        
-                    }}>
-                        <FoodHeader restaurantName = {suggestion.restaurantName}/>
-                        <FoodImage url = {suggestion.foodImage} />
-                        <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
+                   {FastFoodSuggestions.map((suggestion, index) => {
+                        if(props.activeTab === suggestion.tab)
+                        {
+                            return  (
+                                <TouchableOpacity style={{
+                                alignItems: "center",
+                                marginRight:"30",   
+                                paddingHorizontal: 120,
+                                borderRadius: "30" 
+                                
+                                }}>
+                                <FoodHeader restaurantName = {suggestion.restaurantName}/>
+                                <FoodImage url = {suggestion.foodImage} />
+                                <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
 
-                       </TouchableOpacity>
-                   ))}
+                            </TouchableOpacity> 
+                            )                            
+
+                        }
+                    })}
+                       
+                       
+                
                 
                  
                 </ScrollView>

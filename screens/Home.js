@@ -5,7 +5,9 @@ import Header from '../components/Header'
 import FoodCard from '../components/FoodCard'
 
 export default function Home() {
+
     const [activeTab, setActiveTab] = useState("Delivery"); 
+    
     return (
         <SafeAreaView style={{backgroundColor: "#eee"}}>
             <View style = {{backgroundColor: "white"}}>
