@@ -5,60 +5,9 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import Ionicons from "react-native-vector-icons/Ionicons"; 
 import {FastFoodSuggestions, BakerySuggestions, DessertSuggestions, CoffeeSuggestions} from "../foodSuggestions"; 
 
-const suggestions = [
-    {
-        categoryName: "Bakery",
-        restaurantName: "Besiktas Burger King",
-        foodName: "Big King",
-        foodImage: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80", 
-        price: "32$",
-        rating: "4.2", 
-    }, 
 
-     {
-        categoryName: "Fast Food",
-        restaurantName: "Papa John's",
-        foodName: "Orta Boy Pizza",
-        foodImage: "https://cdn.getiryemek.com/restaurants/1581323800278_1125x522.jpeg",
-        price: "22$",
-        rating: "4.4", 
-    }, 
-     {
-        categoryName: "Bakery",
-        restaurantName: "Besiktas Burger King",
-        foodName: "Big King",
-        foodImage: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80", 
-        price: "32$",
-        rating: "4.2", 
-    }, 
-     {
-        categoryName: "Bakery",
-        restaurantName: "Besiktas Burger King",
-        foodName: "Big King",
-        foodImage: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80", 
-        price: "32$",
-        rating: "4.2", 
-    }, 
-     {
-        categoryName: "Bakery",
-        restaurantName: "Besiktas Burger King",
-        foodName: "Big King",
-        foodImage: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80", 
-        price: "32$",
-        rating: "4.2", 
-    }, 
-     {
-        categoryName: "Bakery",
-        restaurantName: "Besiktas Burger King",
-        foodName: "Big King",
-        foodImage: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80", 
-        price: "32$",
-        rating: "4.2", 
-    }, 
-  
 
-]
-export default function RestaurantCard() {
+export default function FoodCard() {
     return (
 
         <ScrollView showsVerticalScrollIndicator= {false}
@@ -278,6 +227,7 @@ const FoodInfo = (props) => (
             height: 30, 
             width: 30, 
             alignItems: "center", 
+            justifyContent: "center",
             borderRadius: 15,
         }}
     >   

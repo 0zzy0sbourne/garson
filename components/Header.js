@@ -3,7 +3,8 @@ import { View, Text } from 'react-native'
 import { TouchableOpacity } from 'react-native-web';
 import HeaderButtons from './HeaderButtons';
 import Ionicons from "react-native-vector-icons/Ionicons"; 
-
+import LocationSearch from './LocationSearch';
+import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 
 
 export default function Header() {
@@ -44,6 +45,7 @@ export default function Header() {
                 <Ionicons name = "arrow-down" size={24} /> 
             </View>
            
+
 
             
             
