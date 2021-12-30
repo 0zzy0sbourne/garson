@@ -57,7 +57,6 @@ export default function Header() {
                 {/* Search Icon */}
                 <Ionicons name = "search" size={24} /> 
             </View>
-           
         
         
         </View>
