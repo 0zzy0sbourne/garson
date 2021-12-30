@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, SafeAreaView, ScrollView } from 'react-native'
 import Categories from '../components/Categories'
 import Header from '../components/Header'
-import RestaurantCard from '../components/RestaurantCard'
+import FoodCard from '../components/FoodCard'
 export default function Home() {
     return (
         <SafeAreaView style={{backgroundColor: "#eee"}}>
@@ -12,7 +12,7 @@ export default function Home() {
             
             <ScrollView showsVerticalScrollIndicator={false}>
                 <Categories/>
-                <RestaurantCard/>
+                <FoodCard/>
             </ScrollView>
 
             
