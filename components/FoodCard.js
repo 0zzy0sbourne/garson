@@ -92,20 +92,27 @@ export default function FoodCard(props) {
                     style={{flexDirection: "column"}}
                 >
                    
-                   {BakerySuggestions.map((suggestion, index) => (
-                       <TouchableOpacity style={{
-                        alignItems: "center",
-                        marginRight:"30",   
-                        paddingHorizontal: 120,
-                        borderRadius: "30" 
-                        
-                    }}>
-                        <FoodHeader restaurantName = {suggestion.restaurantName}/>
-                        <FoodImage url = {suggestion.foodImage} />
-                        <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
+                   {BakerySuggestions.map((suggestion, index) => {
+                        if(props.activeTab === suggestion.tab)
+                        {
+                            return  (
+                                <TouchableOpacity style={{
+                                alignItems: "center",
+                                marginRight:"30",   
+                                paddingHorizontal: 120,
+                                borderRadius: "30" 
+                                
+                                }}>
+                                <FoodHeader restaurantName = {suggestion.restaurantName}/>
+                                <FoodImage url = {suggestion.foodImage} />
+                                <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
 
-                       </TouchableOpacity>
-                   ))}
+                            </TouchableOpacity> 
+                            )                            
+
+                        }
+                    })}
+                       
                 
                  
                 </ScrollView>
@@ -133,21 +140,27 @@ export default function FoodCard(props) {
                     style={{flexDirection: "column"}}
                 >
                    
-                   {DessertSuggestions.map((suggestion, index) => (
-                       <TouchableOpacity style={{
-                        alignItems: "center",
-                        marginRight:"30",   
-                        paddingHorizontal: 120,
-                        borderRadius: "30" 
-                        
-                    }}>
-                        <FoodHeader restaurantName = {suggestion.restaurantName}/>
-                        <FoodImage url = {suggestion.foodImage} />
-                        <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
+                   {DessertSuggestions.map((suggestion, index) => {
+                        if(props.activeTab === suggestion.tab)
+                        {
+                            return  (
+                                <TouchableOpacity style={{
+                                alignItems: "center",
+                                marginRight:"30",   
+                                paddingHorizontal: 120,
+                                borderRadius: "30" 
+                                
+                                }}>
+                                <FoodHeader restaurantName = {suggestion.restaurantName}/>
+                                <FoodImage url = {suggestion.foodImage} />
+                                <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
 
-                       </TouchableOpacity>
-                   ))}
-                
+                            </TouchableOpacity> 
+                            )                            
+
+                        }
+                    })}
+                       
                  
                 </ScrollView>
 
@@ -173,21 +186,27 @@ export default function FoodCard(props) {
                     style={{flexDirection: "column"}}
                 >
                    
-                   {CoffeeSuggestions.map((suggestion, index) => (
-                       <TouchableOpacity style={{
-                        alignItems: "center",
-                        marginRight:"30",   
-                        paddingHorizontal: 120,
-                        borderRadius: "30" 
-                        
-                    }}>
-                        <FoodHeader restaurantName = {suggestion.restaurantName}/>
-                        <FoodImage url = {suggestion.foodImage} />
-                        <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
+                   {CoffeeSuggestions.map((suggestion, index) =>{
+                        if(props.activeTab === suggestion.tab)
+                        {
+                            return  (
+                                <TouchableOpacity style={{
+                                alignItems: "center",
+                                marginRight:"30",   
+                                paddingHorizontal: 120,
+                                borderRadius: "30" 
+                                
+                                }}>
+                                <FoodHeader restaurantName = {suggestion.restaurantName}/>
+                                <FoodImage url = {suggestion.foodImage} />
+                                <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
 
-                       </TouchableOpacity>
-                   ))}
-                
+                            </TouchableOpacity> 
+                            )                            
+
+                        }
+                    })}
+                       
                  
                 </ScrollView>
 
