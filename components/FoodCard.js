@@ -7,7 +7,7 @@ import {FastFoodSuggestions, BakerySuggestions, DessertSuggestions, CoffeeSugges
 
 
 
-export default function FoodCard() {
+export default function FoodCard(props) {
     return (
 
         <ScrollView showsVerticalScrollIndicator= {false}

@@ -7,8 +7,8 @@ import LocationSearch from './LocationSearch';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 
 
-export default function Header() {
-    const [activeTab, setActiveTab] = useState("Tab1")
+export default function Header(props) {
+    // const [activeTab, setActiveTab] = useState("Delivery")
     return (
             
         <View 
@@ -50,8 +50,8 @@ export default function Header() {
             
             
             <View style = {{flexDirection: "row", marginTop: "10px"}}>
-                <HeaderButtons text="Tab1" buttoncolor =  'rgba( 247, 80, 0, 0.8)' activeTab ={activeTab} setActiveTab = {setActiveTab} />
-                <HeaderButtons text="Tab2" buttoncolor =  'gray' activeTab ={activeTab} setActiveTab = {setActiveTab}/>
+                <HeaderButtons text="Delivery" buttoncolor =  'rgba( 247, 80, 0, 0.8)' activeTab ={props.activeTab} setActiveTab = {props.setActiveTab} />
+                <HeaderButtons text="Pickup" buttoncolor =  'gray' activeTab ={props.activeTab} setActiveTab = {props.setActiveTab}/>
                 
                 
                 {/* Settings Icon */}
