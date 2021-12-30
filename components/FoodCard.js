@@ -2,6 +2,8 @@ import React from 'react'
 import { View, Text, Image, ScrollView} from 'react-native'
 import { TouchableOpacity } from 'react-native-web';
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"; 
+import Ionicons from "react-native-vector-icons/Ionicons"; 
+import {FastFoodSuggestions, BakerySuggestions, DessertSuggestions, CoffeeSuggestions} from "../foodSuggestions"; 
 
 const suggestions = [
     {
@@ -71,7 +73,56 @@ export default function RestaurantCard() {
                 
                 <View>
                         <Text
-                            style={{fontSize: 21, color: "rgb(247,80,0)", fontWeight: "600"}}
+                            style=
+                            {{
+                                fontSize: 21, 
+                                color: "rgb(247,80,0)", 
+                                fontWeight: "600",
+                                paddingHorizontal: 20
+                                
+                            }}
+                        >
+                            Fast-Food
+                            </Text>
+                </View>
+
+
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}
+                    style={{flexDirection: "column"}}
+                >
+                   
+                   {FastFoodSuggestions.map((suggestion, index) => (
+                       <TouchableOpacity style={{
+                        alignItems: "center",
+                        marginRight:"30",   
+                        paddingHorizontal: 120,
+                        borderRadius: "30" 
+                        
+                    }}>
+                        <FoodHeader restaurantName = {suggestion.restaurantName}/>
+                        <FoodImage url = {suggestion.foodImage} />
+                        <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
+
+                       </TouchableOpacity>
+                   ))}
+                
+                 
+                </ScrollView>
+
+                
+                    
+
+                
+                <View>
+                        <Text
+                            style=
+                            {{
+                                fontSize: 21, 
+                                color: "rgb(247,80,0)", 
+                                fontWeight: "600",
+                                paddingHorizontal: 20
+                                
+                            }}
                         >
                             Bakery
                             </Text>
@@ -82,7 +133,7 @@ export default function RestaurantCard() {
                     style={{flexDirection: "column"}}
                 >
                    
-                   {suggestions.map((suggestion, index) => (
+                   {BakerySuggestions.map((suggestion, index) => (
                        <TouchableOpacity style={{
                         alignItems: "center",
                         marginRight:"30",   
@@ -92,7 +143,7 @@ export default function RestaurantCard() {
                     }}>
                         <FoodHeader restaurantName = {suggestion.restaurantName}/>
                         <FoodImage url = {suggestion.foodImage} />
-                        <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} />
+                        <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
 
                        </TouchableOpacity>
                    ))}
@@ -101,7 +152,89 @@ export default function RestaurantCard() {
                 </ScrollView>
 
                 
-             
+
+
+                <View>
+                        <Text
+                            style=
+                            {{
+                                fontSize: 21, 
+                                color: "rgb(247,80,0)", 
+                                fontWeight: "600",
+                                paddingHorizontal: 20
+                                
+                            }}
+                        >
+                            Desserts
+                            </Text>
+                </View>
+
+
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}
+                    style={{flexDirection: "column"}}
+                >
+                   
+                   {DessertSuggestions.map((suggestion, index) => (
+                       <TouchableOpacity style={{
+                        alignItems: "center",
+                        marginRight:"30",   
+                        paddingHorizontal: 120,
+                        borderRadius: "30" 
+                        
+                    }}>
+                        <FoodHeader restaurantName = {suggestion.restaurantName}/>
+                        <FoodImage url = {suggestion.foodImage} />
+                        <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
+
+                       </TouchableOpacity>
+                   ))}
+                
+                 
+                </ScrollView>
+
+
+
+                <View>
+                        <Text
+                            style=
+                            {{
+                                fontSize: 21, 
+                                color: "rgb(247,80,0)", 
+                                fontWeight: "600",
+                                paddingHorizontal: 20
+                                
+                            }}
+                        >
+                            Coffee
+                            </Text>
+                </View>
+
+
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}
+                    style={{flexDirection: "column"}}
+                >
+                   
+                   {CoffeeSuggestions.map((suggestion, index) => (
+                       <TouchableOpacity style={{
+                        alignItems: "center",
+                        marginRight:"30",   
+                        paddingHorizontal: 120,
+                        borderRadius: "30" 
+                        
+                    }}>
+                        <FoodHeader restaurantName = {suggestion.restaurantName}/>
+                        <FoodImage url = {suggestion.foodImage} />
+                        <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
+
+                       </TouchableOpacity>
+                   ))}
+                
+                 
+                </ScrollView>
+
+                
+
+                
         
         </ScrollView>
     )
@@ -129,15 +262,28 @@ const FoodInfo = (props) => (
         flexDirection: "row", 
         justifyContent: "space-between", 
         alignItems: "center", 
-        marginTop: 5,
+        marginTop: 10,
     }}>
 
     <View>
-        <Text>{props.foodName}</Text>
+        <Text style={{fontWeight: "bold"}}>{props.foodName}</Text>
         <Text>{props.price}</Text>
+    </View>
+    <View>
+        <Ionicons name="star"/>
+    </View>
+    <View 
+        style={{
+            backgroundColor: "#eee", 
+            height: 30, 
+            width: 30, 
+            alignItems: "center", 
+            borderRadius: 15,
+        }}
+    >   
+        
         <Text>{props.rating}</Text>
     </View>
-
     </View>
 )
 
