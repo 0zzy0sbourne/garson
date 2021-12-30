@@ -247,7 +247,7 @@ const FoodImage = (props) => (
                 uri: `${props.url}`
             }}
             style = {{
-                width: "250%", height: 160,
+                width: "200%", height: 160,
             }}
         />
         <TouchableOpacity style = {{position: "absolute"}}>
@@ -260,8 +260,8 @@ const FoodInfo = (props) => (
     <View 
     style = {{
         flexDirection: "row", 
-        justifyContent: "space-between", 
-        alignItems: "center", 
+        justifyContent: "space-between",
+        alignItems: "center",
         marginTop: 10,
     }}>
 
