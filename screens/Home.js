@@ -8,7 +8,7 @@ import BottomNav from '../components/BottomNav'
 import SafeAreaView from 'react-native-safe-area-view';
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 
-export default function Home() {
+export default function Home({navigation}) {
 
     const [activeTab, setActiveTab] = useState("Delivery"); 
     
@@ -22,7 +22,7 @@ export default function Home() {
                 
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <Categories/>
-                    <FoodCard activeTab = {activeTab} setActiveTab = {setActiveTab}/>
+                    <FoodCard activeTab = {activeTab} setActiveTab = {setActiveTab} navigation = {navigation}   />
                 </ScrollView>
                 <Divider width={1} />
                 <BottomNav/>
