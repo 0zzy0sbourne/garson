@@ -132,7 +132,7 @@ const CoffeeSuggestions = [
         categoryName: "Coffee",
         restaurantName: "Starbucks, Bebek",
         foodName: "Caramel Macchiato",
-        foodImage: "https://scontent.fesb7-1.fna.fbcdn.net/v/t1.6435-9/82215215_10159322692024829_1261868375181623296_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=I75EdhMtVvEAX8XCc-H&_nc_ht=scontent.fesb7-1.fna&oh=00_AT_IZ2lM47HhWeRoHu0dC6vSJ_fRRkU-V7t3N5ETdGyMCQ&oe=61F491BD",
+        foodImage: "https://www.starbucks.com.tr/media/caramel-macchiato_tcm95-64111_w1024_n.png",
         restaurantImage: "https://i.gazeteduvar.com.tr/2/1280/720/storage/files/images/2021/11/25/starbucks-J9Od_cover.jpg",
         restaurantRating:"4.1", 
         workingHours: "08.00-01.00",
