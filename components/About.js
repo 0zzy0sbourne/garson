@@ -8,12 +8,12 @@ const title = "Burger King";
 const description = "Fast-Food"; 
 
 export default function About(props) {
-    const {name, image, rating, categories} = props.route.params; 
+    const {name, image, rating, categories, workingHours} = props.route.params; 
     return (
         <View>
             <RestaurantImage image = {image}/>
             <RestaurantTitle title = {name} />
-            <RestaurantDescription description= {description} />
+            <RestaurantDescription rating = {rating} category = {categories} workingHours = {workingHours} />
         </View>
     )
 }
@@ -35,7 +35,8 @@ const RestaurantTitle = (props) => (
 
 
 const RestaurantDescription = (props) => (
-    <Text
+    <View style = {{flexDirection: "column"}}>
+        <Text
         style= {{
                 
         fontSize: 15,
@@ -43,7 +44,18 @@ const RestaurantDescription = (props) => (
         marginTop: 10,
         marginHorizontal: 15,    
         }}
-    > {props.description}</Text>
+    > {props.rating} {props.category}</Text>
+    <Text  
+        style= {{
+                
+        fontSize: 15,
+        fontWeight: "400", 
+        marginTop: 10,
+        marginHorizontal: 15,    
+        }}
+    > {props.workingHours}</Text>
+    </View>
+  
 );
 
 

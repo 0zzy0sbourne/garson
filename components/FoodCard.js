@@ -59,7 +59,7 @@ export default function FoodCard({navigation, ...props}) {
                                         image: suggestion.restaurantImage,
                                         rating: suggestion.restaurantRating,
                                         categories: suggestion.categoryName, 
-
+                                        workingHours: suggestion.workingHours, 
                                     }
                                 )}
                                 
@@ -121,7 +121,7 @@ export default function FoodCard({navigation, ...props}) {
                                         image: suggestion.restaurantImage,
                                         rating: suggestion.restaurantRating,
                                         categories: suggestion.categoryName, 
-
+                                        workingHours: suggestion.workingHours, 
                                     }
                                 )}
                                 >
@@ -179,7 +179,7 @@ export default function FoodCard({navigation, ...props}) {
                                         image: suggestion.restaurantImage,
                                         rating: suggestion.restaurantRating,
                                         categories: suggestion.categoryName, 
-
+                                        workingHours: suggestion.workingHours, 
                                     }
                                 )}
                                 >
@@ -235,6 +235,7 @@ export default function FoodCard({navigation, ...props}) {
                                         image: suggestion.restaurantImage,
                                         rating: suggestion.restaurantRating,
                                         categories: suggestion.categoryName, 
+                                        workingHours: suggestion.workingHours, 
 
                                     }
                                 )}

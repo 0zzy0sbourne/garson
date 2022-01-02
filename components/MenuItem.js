@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet ,Image, ScrollView} from 'react-native'
 import { Divider } from 'react-native-elements/dist/divider/Divider';
 import Ionicons from "react-native-vector-icons/Ionicons"; 
-
+import Foods from "../MenuLists"; 
 
 const styles = StyleSheet.create({
   menuItemStyle: {
@@ -17,57 +17,32 @@ const styles = StyleSheet.create({
   },
 });
 
-const foods = [
-    {
-        title: "Big King", 
-        description: "Köfte, karamelize soğan...",
-        price: "$12", 
-        image: "https://cdn.getiryemek.com/products/1623327056988_500x375.jpeg",
-        calories: "650",
-    },
-    {
-        title: "Big King", 
-        description: "Köfte, karamelize soğan...",
-        price: "$12", 
-        image: "https://cdn.getiryemek.com/products/1623327056988_500x375.jpeg",
-        calories: "650",
-    },
-      {
-        title: "Big King", 
-        description: "Köfte, karamelize soğan...",
-        price: "$12", 
-        image: "https://cdn.getiryemek.com/products/1623327056988_500x375.jpeg",
-        calories: "650",
-    },
-      {
-        title: "Big King", 
-        description: "Köfte, karamelize soğan...",
-        price: "$12", 
-        image: "https://cdn.getiryemek.com/products/1623327056988_500x375.jpeg",
-        calories: "650",
-    },
-      {
-        title: "Big King", 
-        description: "Köfte, karamelize soğan...",
-        price: "$12", 
-        image: "https://cdn.getiryemek.com/products/1623327056988_500x375.jpeg",
-        calories: "650",
-    },
-]; 
-export default function MenuItem() {
+
+export default function MenuItem(props) {
+
+    const {name, image, rating, categories, workingHours} = props.route.params; 
+   
     return (
         <ScrollView showsVerticalScrollIndicator={false} >
- 
-            {foods.map((food, index) => ( 
-                <View key = {index}>
-                    <View style={styles.menuItemStyle}>
-                        <FoodInfo food = {food} /> 
-                        <FoodImage food = {food} /> 
+            
+            {Foods.map((food, index) => {
+
+                if(food.restaurantName === name)
+                {
+                    return (
+                             <View key = {index}>
+                        <View style={styles.menuItemStyle}>
+                            <FoodInfo food = {food} /> 
+                            <FoodImage food = {food} /> 
+                        </View>
+                        <Divider width={0.5} orientation=' ="vertical' /> 
                     </View>
-                    <Divider width={0.5} orientation=' ="vertical' /> 
-                </View>
+                    ); 
+               
+                }
+              
                 
-            ))}
+            })}
 
         </ScrollView>
        
@@ -81,7 +56,7 @@ const FoodInfo = (props) =>  (
         width: 240,
         justifyContent: "space-evenly"
     }}>
-        <Text style = {styles.titleStyle}>{props.food.title}</Text>
+        <Text style = {styles.titleStyle}>{props.food.foodName}</Text>
         <Text>{props.food.description}</Text>
         <View style={{flexDirection: "row"}}>
             <Text>{props.food.price}</Text>
@@ -101,6 +76,6 @@ const FoodInfo = (props) =>  (
 
 const FoodImage = (props) => (
     <View>
-        <Image source ={{uri: props.food.image}} style = {{width: 100, height: 100, borderRadius: 8}} />
+        <Image source ={{uri: props.food.foodImage}} style = {{width: 100, height: 100, borderRadius: 8}} />
     </View>
 ); 
