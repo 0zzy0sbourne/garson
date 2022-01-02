@@ -53,7 +53,15 @@ export default function FoodCard({navigation, ...props}) {
                                 borderRadius: "30" 
                                 
                                 }}
-                                onPress = {() => navigation.navigate("RestaurantDetail")}
+                                onPress = {() => navigation.navigate("RestaurantDetail", 
+                                    {
+                                        name: suggestion.restaurantName, 
+                                        image: suggestion.restaurantImage,
+                                        rating: suggestion.restaurantRating,
+                                        categories: suggestion.categoryName, 
+
+                                    }
+                                )}
                                 
                                 >
                                 <FoodHeader restaurantName = {suggestion.restaurantName}/>
@@ -106,7 +114,17 @@ export default function FoodCard({navigation, ...props}) {
                                 paddingHorizontal: 120,
                                 borderRadius: "30" 
                                 
-                                }}>
+                                }}
+                                    onPress = {() => navigation.navigate("RestaurantDetail", 
+                                    {
+                                        name: suggestion.restaurantName, 
+                                        image: suggestion.restaurantImage,
+                                        rating: suggestion.restaurantRating,
+                                        categories: suggestion.categoryName, 
+
+                                    }
+                                )}
+                                >
                                 <FoodHeader restaurantName = {suggestion.restaurantName}/>
                                 <FoodImage url = {suggestion.foodImage} />
                                 <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
@@ -154,7 +172,17 @@ export default function FoodCard({navigation, ...props}) {
                                 paddingHorizontal: 120,
                                 borderRadius: "30" 
                                 
-                                }}>
+                                }}
+                                    onPress = {() => navigation.navigate("RestaurantDetail", 
+                                    {
+                                        name: suggestion.restaurantName, 
+                                        image: suggestion.restaurantImage,
+                                        rating: suggestion.restaurantRating,
+                                        categories: suggestion.categoryName, 
+
+                                    }
+                                )}
+                                >
                                 <FoodHeader restaurantName = {suggestion.restaurantName}/>
                                 <FoodImage url = {suggestion.foodImage} />
                                 <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
@@ -200,7 +228,17 @@ export default function FoodCard({navigation, ...props}) {
                                 paddingHorizontal: 120,
                                 borderRadius: "30" 
                                 
-                                }}>
+                                }}
+                                    onPress = {() => navigation.navigate("RestaurantDetail", 
+                                    {
+                                        name: suggestion.restaurantName, 
+                                        image: suggestion.restaurantImage,
+                                        rating: suggestion.restaurantRating,
+                                        categories: suggestion.categoryName, 
+
+                                    }
+                                )}
+                                >
                                 <FoodHeader restaurantName = {suggestion.restaurantName}/>
                                 <FoodImage url = {suggestion.foodImage} />
                                 <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />

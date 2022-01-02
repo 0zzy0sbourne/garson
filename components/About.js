@@ -7,11 +7,12 @@ const title = "Burger King";
 
 const description = "Fast-Food"; 
 
-export default function About() {
+export default function About(props) {
+    const {name, image, rating, categories} = props.route.params; 
     return (
         <View>
             <RestaurantImage image = {image}/>
-            <RestaurantTitle title = {title} />
+            <RestaurantTitle title = {name} />
             <RestaurantDescription description= {description} />
         </View>
     )
