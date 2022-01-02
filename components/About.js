@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, Image } from 'react-native'
+import MenuItem from './MenuItem';
 
 const image = "https://cdn.yenicaggazetesi.com.tr/news/476189.jpg"; 
 const title = "Burger King"; 
