@@ -4,10 +4,11 @@ import { TouchableOpacity } from 'react-native-web';
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"; 
 import Ionicons from "react-native-vector-icons/Ionicons"; 
 import {FastFoodSuggestions, BakerySuggestions, DessertSuggestions, CoffeeSuggestions} from "../foodSuggestions"; 
+import { useNavigationBuilder } from '@react-navigation/native';
 
 
 
-export default function FoodCard(props) {
+export default function FoodCard({navigation, ...props}) {
 
     return (
 
@@ -51,7 +52,10 @@ export default function FoodCard(props) {
                                 paddingHorizontal: 120,
                                 borderRadius: "30" 
                                 
-                                }}>
+                                }}
+                                onPress = {() => navigation.navigate("RestaurantDetail")}
+                                
+                                >
                                 <FoodHeader restaurantName = {suggestion.restaurantName}/>
                                 <FoodImage url = {suggestion.foodImage} />
                                 <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
