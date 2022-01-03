@@ -29,7 +29,7 @@ const FastFoodSuggestions = [
         restaurantName: "Pizza Bulls",
         foodName: "Pepperoni Pizza",
         foodImage: "https://cdn.yemeksepeti.com/ProductImages/TR_ISTANBUL/pizza_bulls/pepperoni_big.jpg",
-        restaurantImage: "https://lh3.googleusercontent.com/proxy/1PcENUZq1x_jdkXCc5eiOlwS4oVYstw3UTia86I-aIJdcEA2O6e35UAs6H08qvOPzk9q_QgQ6HCe4MiD0aLLMlVetZAZiZKuQ_D-Gw3_jg", 
+        restaurantImage: "https://files.sikayetvar.com/lg/cmp/14/14254.png?1522650125", 
         restaurantRating: "3.9",
         workingHours: "08.00-24.00",
         price: "29$",

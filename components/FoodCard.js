@@ -5,6 +5,9 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import Ionicons from "react-native-vector-icons/Ionicons"; 
 import {FastFoodSuggestions, BakerySuggestions, DessertSuggestions, CoffeeSuggestions} from "../foodSuggestions"; 
 import { useNavigationBuilder } from '@react-navigation/native';
+import { Divider } from 'react-native-elements/dist/divider/Divider';
+import FontAwesome5 from "react-native-vector-icons/FontAwesome5"; 
+
 
 
 
@@ -27,10 +30,10 @@ export default function FoodCard({navigation, ...props}) {
                         <Text
                             style=
                             {{
-                                fontSize: 21, 
+                                fontSize: "21pt", 
                                 color: "rgb(247,80,0)", 
                                 fontWeight: "600",
-                                paddingHorizontal: 20
+                                paddingHorizontal: "15pt"
                                 
                             }}
                         >
@@ -52,8 +55,9 @@ export default function FoodCard({navigation, ...props}) {
                                     borderRadius: "10", 
                                     overflow: "hidden",
                                     width: "75%",  
-                                    marginHorizontal: "20pt",
+                                    marginHorizontal: "15pt",
                                     borderRadius: "30",
+                                    marginVertical: "", 
  
                                 
                                 }}
@@ -86,16 +90,16 @@ export default function FoodCard({navigation, ...props}) {
 
                 
                     
-
+                <Divider width={1.8} style = {{marginVertical: 20}} /> 
                 
                 <View>
                         <Text
                             style=
                             {{
-                                fontSize: 21, 
+                                fontSize: "21pt", 
                                 color: "rgb(247,80,0)", 
                                 fontWeight: "600",
-                                paddingHorizontal: 20
+                                paddingHorizontal: "15pt"
                                 
                             }}
                         >
@@ -117,7 +121,7 @@ export default function FoodCard({navigation, ...props}) {
                                     borderRadius: "10", 
                                     overflow: "hidden",
                                     width: "75%",  
-                                    marginHorizontal: "20pt",
+                                    marginHorizontal: "15pt",
                                     borderRadius: "30",
                                 }}
                                     onPress = {() => navigation.navigate("RestaurantDetail", 
@@ -144,17 +148,17 @@ export default function FoodCard({navigation, ...props}) {
                  
                 </ScrollView>
 
-                
+                <Divider width={1.8} style = {{marginVertical: 20}} /> 
 
 
                 <View>
                         <Text
                             style=
                             {{
-                                fontSize: 21, 
+                                fontSize: "21pt", 
                                 color: "rgb(247,80,0)", 
                                 fontWeight: "600",
-                                paddingHorizontal: 20
+                                paddingHorizontal: "15pt"
                                 
                             }}
                         >
@@ -176,7 +180,7 @@ export default function FoodCard({navigation, ...props}) {
                                     borderRadius: "10", 
                                     overflow: "hidden",
                                     width: "75%",  
-                                    marginHorizontal: "20pt",
+                                    marginHorizontal: "15pt",
                                     borderRadius: "30",
                                 }}
                                     onPress = {() => navigation.navigate("RestaurantDetail", 
@@ -202,16 +206,16 @@ export default function FoodCard({navigation, ...props}) {
                  
                 </ScrollView>
 
-
+                <Divider width={1.8} style = {{marginVertical: 20}} /> 
 
                 <View>
                         <Text
                             style=
                             {{
-                                fontSize: 21, 
+                                fontSize: "21pt", 
                                 color: "rgb(247,80,0)", 
                                 fontWeight: "600",
-                                paddingHorizontal: 20
+                                paddingHorizontal: "15pt",
                                 
                             }}
                         >
@@ -233,7 +237,7 @@ export default function FoodCard({navigation, ...props}) {
                                     borderRadius: "10", 
                                     overflow: "hidden",
                                     width: "75%",  
-                                    marginHorizontal: "20pt",
+                                    marginHorizontal: "15pt",
                                     borderRadius: "30",
                                 }}
                                     onPress = {() => navigation.navigate("RestaurantDetail", 
@@ -295,28 +299,51 @@ const FoodInfo = (props) => (
     }}>
 
     <View>
-        <Text style={{fontWeight: "bold"}}>{props.foodName}</Text>
-        <Text>{props.price}</Text>
+        <Text style={{
+            fontWeight:"bold", 
+        fontSize: "16pt"}}>{props.foodName}</Text>
+        <View style = {{flexDirection: "row"}}>
+            <Text style = {{
+            fontSize: "12pt",
+            color: "rgb(84, 84, 84)",    
+            }}>{props.price}</Text>
+
+            <FontAwesome5 name = "utensils"  style = {{
+                marginLeft:"10pt", 
+                color: "rgb(247, 80, 80)"}} />
+            <FontAwesome5 name = "shopping-basket" style = {{
+                marginLeft: "3pt", 
+                color: "rgb(247, 80, 80)"}} /> 
+            <FontAwesome5 name = "motorcycle" style = {{
+                marginLeft: "3pt", 
+                color: "rgb(84, 84, 84)"}} /> 
+        </View>
+        
     </View>
-    <View>
-        <Ionicons name="star"/>
-    </View>
+        
     <View 
         style={{
-            backgroundColor: "#eee", 
-            height: 30, 
-            width: 30, 
+            flexDirection: "row",
+ 
+            width: "100%", 
             alignItems: "center", 
             justifyContent: "center",
             borderRadius: 15,
+            
         }}
     >   
-        
-        <Text>{props.rating}</Text>
+        <Ionicons name="star" style = {{
+            color: "rgb(252, 161, 24)", 
+            size :"22pt", 
+        }}/>
+        <Text style = {{ fontWeight:"600"}}>{props.rating}</Text>
     </View>
     </View>
 )
 
 const FoodHeader= (props) => (
-    <View><Text>{props.restaurantName}</Text></View>
+    <View><Text style = {{
+        fontSize: "18pt",
+        fontWeight: "900", 
+    }}>{props.restaurantName}</Text></View>
 )
