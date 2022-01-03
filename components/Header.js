@@ -62,7 +62,7 @@ export default function Header(props) {
                 style = {{marginLeft:"100.3pt", }}
                 /> 
                 {/* Search Icon */}
-                <Ionicons name = "search" size={24} style = {{}} /> 
+                <Ionicons name = "search" size={24} style = {{marginLeft: "20pt"}} /> 
             </View>
         
         

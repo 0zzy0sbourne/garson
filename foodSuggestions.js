@@ -57,6 +57,7 @@ const FastFoodSuggestions = [
         calories: "494,13", 
         price: "$43",
         tab: "Delivery", 
+        rating: "4.3",
     },
         {
         categoryName: "Fast-Food",
@@ -67,6 +68,7 @@ const FastFoodSuggestions = [
         description: "zeytinli, sucuklu, salamli akdeniz pizza", 
         calories: "432,49" ,
         price: "$27",
+        rating: "3.9", 
         tab: "Pickup", 
     },
 
@@ -131,6 +133,7 @@ const BakerySuggestions = [
         description: "1/3 baget ekmeği", 
         calories: "100",
         tab:"Delivery",
+        rating: "3.5",
     },
         {
         categoryName: "Bakery",
@@ -141,6 +144,7 @@ const BakerySuggestions = [
         description: "karişik tuzlu kurabiye", 
         calories: "30,345", 
         price: "$9",
+        rating: "4.1", 
         tab: "Delivery",
     },
     
@@ -190,6 +194,7 @@ const DessertSuggestions = [
         restaurantName: "Nazar Pastanesi",
         description: "Bütün San Sebastian Cheesecake", 
         calories: "150,445", 
+        rating: "4.0",
         price: "$49",
         tab: "Pickup",
     },
@@ -200,7 +205,8 @@ const DessertSuggestions = [
         restaurantImage :"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/2/AmazonStores/ATVPDKIKX0DER/ff54a15bedc8c3f8065cde9afe4137bb.w408.h408.jpg", 
         restaurantName: "Baklavaci Güllüoğlu",
         description: "leziz çitir cevizli baklava", 
-        calories: "1403,111", 
+        calories: "1403,111",
+        rating: "4.6", 
         price: "$25",
         tab: "Delivery",
     },

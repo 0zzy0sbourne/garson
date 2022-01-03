@@ -284,10 +284,7 @@ const FoodImage = (props) => (
                 width: "100%", height: 180
             }}
             />
-            <TouchableOpacity style = {{position: "absolute", right: "20", top: "20"}}>
-                <MaterialCommunityIcons name = "heart-outline" size={30} color = "#fff"/>
-            </TouchableOpacity>
-  </>       
+  </>      
 );
 
 const FoodInfo = (props) => ( 
@@ -326,7 +323,7 @@ const FoodInfo = (props) => (
         style={{
             flexDirection: "row",
  
-            width: "100%", 
+            width: "75%", 
             alignItems: "center", 
             justifyContent: "center",
             borderRadius: 15,
