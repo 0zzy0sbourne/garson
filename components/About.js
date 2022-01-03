@@ -3,6 +3,8 @@ import { View, Text, Image } from 'react-native'
 import MenuItem from './MenuItem';
 import Ionicons from "react-native-vector-icons/Ionicons"; 
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5"; 
+import MenuNav from './MenuNav';
+import { Divider } from 'react-native-elements';
 
 
 
@@ -18,6 +20,8 @@ export default function About(props) {
             <RestaurantImage image = {image}/>
             <RestaurantTitle title = {name} />
             <RestaurantDescription rating = {rating} category = {categories} workingHours = {workingHours} />
+            <Divider width={1.8} style = {{marginVertical: 20}} /> 
+            <MenuNav/>
         </View>
     )
 }
