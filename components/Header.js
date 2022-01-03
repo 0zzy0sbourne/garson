@@ -14,7 +14,7 @@ export default function Header(props) {
         <View 
         style = {{flexDirection: "column", 
         alignSelf: "center", 
-        paddingVertical: 10,
+        paddingVertical: "14pt",
         }}>
             
             <View style= {{fontFamily: "Jost", width: "auto", height: "auto",  flexDirection: "row", marginTop: "10px", alignSelf: "center"}}>
@@ -22,6 +22,7 @@ export default function Header(props) {
                 style = {{
                 color: 'rgb( 247, 80, 0)',  
                 fontSize: 32,
+                marginBottom:"6pt", 
                 fontWeight: "900"
                 }}
                 >garson</Text>
@@ -35,29 +36,33 @@ export default function Header(props) {
                 alignSelf: "center",
 
                 }}>
-                <Ionicons name = "location-sharp" size={24} /> 
+                <Ionicons name = "location-sharp" size={24} style = {{marginRight: "10pt"}} /> 
                 <Text
                 style = {{
                     fontSize: 16,
                     fontWeight: "400"
                 }}
                 >Location</Text>
-                <Ionicons name = "arrow-down" size={24} /> 
+                <Ionicons name = "arrow-down" size={24} style = {{marginLeft:"10pt"}} /> 
             </View>
            
 
 
             
             
-            <View style = {{flexDirection: "row", marginTop: "10px"}}>
+            <View style = {{
+                flexDirection: "row", marginTop: "10px",
+                }}>
                 <HeaderButtons text="Delivery" buttoncolor =  'rgba( 247, 80, 0, 0.8)' activeTab ={props.activeTab} setActiveTab = {props.setActiveTab} />
                 <HeaderButtons text="Pickup" buttoncolor =  'gray' activeTab ={props.activeTab} setActiveTab = {props.setActiveTab}/>
                 
                 
                 {/* Settings Icon */}
-                <Ionicons name = "settings" size={24} /> 
+                <Ionicons name = "settings" size={24} 
+                style = {{marginLeft:"100.3pt", }}
+                /> 
                 {/* Search Icon */}
-                <Ionicons name = "search" size={24} /> 
+                <Ionicons name = "search" size={24} style = {{}} /> 
             </View>
         
         

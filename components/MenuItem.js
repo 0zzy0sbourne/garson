@@ -97,6 +97,13 @@ const FoodInfo = (props) =>  (
 
 const FoodImage = (props) => (
     <View>
-        <Image source ={{uri: props.food.foodImage}} style = {{width: 100, height: 100, borderRadius: 8}} />
+        <Image source ={{uri: props.food.foodImage}} 
+        style = 
+            {{
+                width: 100, 
+                height: 100, 
+                borderRadius: 8
+            }} 
+        />
     </View>
 ); 

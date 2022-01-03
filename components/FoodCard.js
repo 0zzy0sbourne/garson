@@ -13,7 +13,8 @@ export default function FoodCard({navigation, ...props}) {
     return (
 
         <ScrollView showsVerticalScrollIndicator= {false}
-            style={{backgroundColor: "white"}}
+            style={{backgroundColor: "white",
+        }}
         > {/* Only Vertical ScrollView */}
             
             {/* More than one Horizontal ScrollViews */}
@@ -47,10 +48,13 @@ export default function FoodCard({navigation, ...props}) {
                         {
                             return  (
                                 <TouchableOpacity style={{
-                                alignItems: "center",
-                                marginRight:"30",   
-                                paddingHorizontal: 120,
-                                borderRadius: "30" 
+                                    marginRight:"30",   
+                                    borderRadius: "10", 
+                                    overflow: "hidden",
+                                    width: "75%",  
+                                    marginHorizontal: "20pt",
+                                    borderRadius: "30",
+ 
                                 
                                 }}
                                 onPress = {() => navigation.navigate("RestaurantDetail", 
@@ -109,11 +113,12 @@ export default function FoodCard({navigation, ...props}) {
                         {
                             return  (
                                 <TouchableOpacity style={{
-                                alignItems: "center",
-                                marginRight:"30",   
-                                paddingHorizontal: 120,
-                                borderRadius: "30" 
-                                
+                                    marginRight:"30",   
+                                    borderRadius: "10", 
+                                    overflow: "hidden",
+                                    width: "75%",  
+                                    marginHorizontal: "20pt",
+                                    borderRadius: "30",
                                 }}
                                     onPress = {() => navigation.navigate("RestaurantDetail", 
                                     {
@@ -167,11 +172,12 @@ export default function FoodCard({navigation, ...props}) {
                         {
                             return  (
                                 <TouchableOpacity style={{
-                                alignItems: "center",
-                                marginRight:"30",   
-                                paddingHorizontal: 120,
-                                borderRadius: "30" 
-                                
+                                    marginRight:"30",   
+                                    borderRadius: "10", 
+                                    overflow: "hidden",
+                                    width: "75%",  
+                                    marginHorizontal: "20pt",
+                                    borderRadius: "30",
                                 }}
                                     onPress = {() => navigation.navigate("RestaurantDetail", 
                                     {
@@ -223,11 +229,12 @@ export default function FoodCard({navigation, ...props}) {
                         {
                             return  (
                                 <TouchableOpacity style={{
-                                alignItems: "center",
-                                marginRight:"30",   
-                                paddingHorizontal: 120,
-                                borderRadius: "30" 
-                                
+                                    marginRight:"30",   
+                                    borderRadius: "10", 
+                                    overflow: "hidden",
+                                    width: "75%",  
+                                    marginHorizontal: "20pt",
+                                    borderRadius: "30",
                                 }}
                                     onPress = {() => navigation.navigate("RestaurantDetail", 
                                     {
@@ -262,19 +269,20 @@ export default function FoodCard({navigation, ...props}) {
 }
 
 const FoodImage = (props) => (
-    <>
-        <Image
+    
+<>
+            <Image
             source = {{
                 uri: `${props.url}`
             }}
             style = {{
-                width: "200%", height: 160,
+                width: "100%", height: 180
             }}
-        />
-        <TouchableOpacity style = {{position: "absolute"}}>
-            <MaterialCommunityIcons name = "heart-outline" size={30} color = "#fff"/>
-        </TouchableOpacity>
-    </>
+            />
+            <TouchableOpacity style = {{position: "absolute", right: "20", top: "20"}}>
+                <MaterialCommunityIcons name = "heart-outline" size={30} color = "#fff"/>
+            </TouchableOpacity>
+  </>       
 );
 
 const FoodInfo = (props) => ( 

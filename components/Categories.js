@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, Image, ScrollView } from 'react-native'
-// import { Image } from 'react-native-web'
+import { TouchableOpacity } from 'react-native-web'
 
 const categories = [
     {
@@ -35,21 +35,24 @@ export default function Categories() {
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             {categories.map((category, index) => (
             
-            <View style = {{
+            <TouchableOpacity>
+                <View style = {{
                 alignItems: "center",
                 marginRight:"30",
                 paddingHorizontal: 30, 
                 }}>
-            <Image source = {category.image} style ={{
-                width: 50, 
-                height: 40, 
-                resizeMode: "contain", 
-            }}/>
-            <Text style = {{fontSize: "12"}}>
-                {category .text}
-            </Text>
-            </View> 
-            ))}
+                <Image source = {category.image} style ={{
+                    width: 50, 
+                    height: 40, 
+                    resizeMode: "contain", 
+                }}/>
+                <Text style = {{fontSize: "12"}}>
+                    {category .text}
+                </Text>
+                </View> 
+
+            </TouchableOpacity>
+            ))}       
          
        
         </ScrollView>
