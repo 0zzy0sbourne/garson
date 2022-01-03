@@ -15,7 +15,7 @@ export default function BottomNav() {
             {/* Home Icon */}
             <Icon icon = "home"  /> 
             <Icon icon = "shopping-cart" />
-            <Icon icon = "qrcode" />
+            <Qrmenu icon = "qrcode" />
             <Icon icon = "comment-dots" />
             <Icon icon = "user-circle" />
         </View>
@@ -27,13 +27,31 @@ const Icon = (props) =>  (
         <View>
             <FontAwesome5 
             name = {props.icon} 
-            size = {25}
+            size = {34}
             style= {{
                 marginBottom: 3, 
-                alignSelf: "center"
+                alignSelf: "center", 
             }} 
             />
         </View>
     </TouchableOpacity>
     
 ); 
+const Qrmenu = (props) => (
+        
+        <TouchableOpacity>
+        <View>
+            <FontAwesome5 
+            name = {props.icon} 
+            size = {57}
+            style= {{
+                marginBottom: 3, 
+                alignSelf: "center",
+                color: "rgb(247,80,0)", 
+            }} 
+            />
+        </View>
+    </TouchableOpacity>
+    
+
+);

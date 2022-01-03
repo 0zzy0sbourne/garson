@@ -1,6 +1,10 @@
 import React from 'react'
 import { View, Text, Image } from 'react-native'
 import MenuItem from './MenuItem';
+import Ionicons from "react-native-vector-icons/Ionicons"; 
+import FontAwesome5 from "react-native-vector-icons/FontAwesome5"; 
+
+
 
 const image = "https://cdn.yenicaggazetesi.com.tr/news/476189.jpg"; 
 const title = "Burger King"; 
@@ -25,7 +29,7 @@ const RestaurantImage = (props) => (
 const RestaurantTitle = (props) => (
     <Text style = {{
        
-        fontSize: 29,
+        fontSize: "24pt",
         fontWeight: "600", 
         marginTop: 10,
         marginHorizontal: 15,  
@@ -36,24 +40,60 @@ const RestaurantTitle = (props) => (
 
 const RestaurantDescription = (props) => (
     <View style = {{flexDirection: "column"}}>
-        <Text
+        <View style=
+        {{
+            flexDirection: "row",
+            alignItems: "center" ,
+            marginHorizontal: 15,
+        
+        }}>
+            <View style = 
+            {{flexDirection:"row", 
+            alignItems:"center"
+            }}>
+                <Ionicons name = "star" style = {{color: "rgb(247,80,0)", }} /> 
+                 <Text
+                style= {{
+                fontSize: 15,
+                fontWeight: "400", 
+                marginTop: 10,
+                }}
+                > {props.rating}</Text>
+
+            </View>
+                
+
+            <Text
+            style= {{
+                
+            fontSize: 15,
+            fontWeight: "400", 
+            marginTop: 10,
+            marginHorizontal: 15,    
+            }}
+            > {props.category}</Text>
+
+
+        </View> 
+
+    <View style = 
+        {{ 
+            flexDirection: "row",
+            alignItems: "center" ,
+            marginHorizontal: 15,}}>
+        
+        <Ionicons name = "ios-time" /> 
+        <Text  
         style= {{
                 
         fontSize: 15,
         fontWeight: "400", 
         marginTop: 10,
-        marginHorizontal: 15,    
-        }}
-    > {props.rating} {props.category}</Text>
-    <Text  
-        style= {{
-                
-        fontSize: 15,
-        fontWeight: "400", 
-        marginTop: 10,
-        marginHorizontal: 15,    
         }}
     > {props.workingHours}</Text>
+
+    </View>
+  
     </View>
   
 );
