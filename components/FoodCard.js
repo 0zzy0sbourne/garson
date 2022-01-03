@@ -7,6 +7,7 @@ import {FastFoodSuggestions, BakerySuggestions, DessertSuggestions, CoffeeSugges
 import { useNavigationBuilder } from '@react-navigation/native';
 import { Divider } from 'react-native-elements/dist/divider/Divider';
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5"; 
+import FoodCardButton from './FoodCardButton';
 
 
 
@@ -75,7 +76,7 @@ export default function FoodCard({navigation, ...props}) {
                                 <FoodHeader restaurantName = {suggestion.restaurantName}/>
                                 <FoodImage url = {suggestion.foodImage} />
                                 <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
-
+                                <FoodCardButton />
                             </TouchableOpacity> 
                             )                            
 
@@ -137,7 +138,7 @@ export default function FoodCard({navigation, ...props}) {
                                 <FoodHeader restaurantName = {suggestion.restaurantName}/>
                                 <FoodImage url = {suggestion.foodImage} />
                                 <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
-
+                                <FoodCardButton />
                             </TouchableOpacity> 
                             )                            
 
@@ -196,7 +197,7 @@ export default function FoodCard({navigation, ...props}) {
                                 <FoodHeader restaurantName = {suggestion.restaurantName}/>
                                 <FoodImage url = {suggestion.foodImage} />
                                 <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
-
+                                <FoodCardButton />
                             </TouchableOpacity> 
                             )                            
 
@@ -254,7 +255,7 @@ export default function FoodCard({navigation, ...props}) {
                                 <FoodHeader restaurantName = {suggestion.restaurantName}/>
                                 <FoodImage url = {suggestion.foodImage} />
                                 <FoodInfo price = {suggestion.price} foodName = {suggestion.foodName} rating = {suggestion.rating} />
-
+                                <FoodCardButton />
                             </TouchableOpacity> 
                             )                            
 
