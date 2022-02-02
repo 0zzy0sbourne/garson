@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-import GOOGLE_MAPS_APIKEY from "../.env"; 
+// import GOOGLE_MAPS_APIKEY from "../@env"; 
 
 export default function LocationSearch() {
     return (
@@ -25,7 +25,7 @@ export default function LocationSearch() {
                     enablePoweredByContainer = {false}
                     minLength = {2}
                     query = {{
-                        key: GOOGLE_MAPS_APIKEY, 
+                        key: null, 
                         language: "en", 
 
                     }}

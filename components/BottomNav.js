@@ -1,7 +1,6 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text ,TouchableOpacity} from 'react-native'
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5"; 
-import { TouchableOpacity } from 'react-native-web';
 
 
 export default function BottomNav() {
@@ -12,7 +11,6 @@ export default function BottomNav() {
             marginHorizontal: 30,
             justifyContent: "space-between"
         }}>
-            {/* Home Icon */}
             <Icon icon = "home"  /> 
             <Icon icon = "shopping-cart" />
             <Qrmenu icon = "qrcode" />

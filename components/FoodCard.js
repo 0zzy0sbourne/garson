@@ -1,6 +1,5 @@
 import React from 'react'
-import { View, Text, Image, ScrollView} from 'react-native'
-import { TouchableOpacity } from 'react-native-web';
+import { View, Text, Image, ScrollView, TouchableOpacity} from 'react-native'
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"; 
 import Ionicons from "react-native-vector-icons/Ionicons"; 
 import {FastFoodSuggestions, BakerySuggestions, DessertSuggestions, CoffeeSuggestions} from "../foodSuggestions"; 
@@ -19,22 +18,20 @@ export default function FoodCard({navigation, ...props}) {
         <ScrollView showsVerticalScrollIndicator= {false}
             style={{backgroundColor: "white",
         }}
-        > {/* Only Vertical ScrollView */}
+        > 
             
-            {/* More than one Horizontal ScrollViews */}
 
 
 
-                 {/* horizontal scrollview for one category*/}
                 
                 <View>
                         <Text
                             style=
                             {{
-                                fontSize: "21pt", 
+                                fontSize: 21, 
                                 color: "rgb(247,80,0)", 
                                 fontWeight: "600",
-                                paddingHorizontal: "15pt"
+                                paddingHorizontal: 15
                                 
                             }}
                         >
@@ -52,13 +49,12 @@ export default function FoodCard({navigation, ...props}) {
                         {
                             return  (
                                 <TouchableOpacity style={{
-                                    marginRight:"30",   
-                                    borderRadius: "10", 
+                                    marginRight:30, 
+                                    borderRadius: 10, 
                                     overflow: "hidden",
                                     width: "75%",  
-                                    marginHorizontal: "15pt",
-                                    borderRadius: "30",
-                                    marginVertical: "", 
+                                    marginHorizontal: 15,
+                                    borderRadius: 30,
  
                                 
                                 }}
@@ -97,10 +93,10 @@ export default function FoodCard({navigation, ...props}) {
                         <Text
                             style=
                             {{
-                                fontSize: "21pt", 
+                                fontSize: 21, 
                                 color: "rgb(247,80,0)", 
                                 fontWeight: "600",
-                                paddingHorizontal: "15pt"
+                                paddingHorizontal: 15
                                 
                             }}
                         >
@@ -118,12 +114,12 @@ export default function FoodCard({navigation, ...props}) {
                         {
                             return  (
                                 <TouchableOpacity style={{
-                                    marginRight:"30",   
-                                    borderRadius: "10", 
+                                    marginRight:30,   
+                                    borderRadius: 10, 
                                     overflow: "hidden",
                                     width: "75%",  
-                                    marginHorizontal: "15pt",
-                                    borderRadius: "30",
+                                    marginHorizontal: 15,
+                                    borderRadius: 30,
                                 }}
                                     onPress = {() => navigation.navigate("RestaurantDetail", 
                                     {
@@ -156,10 +152,10 @@ export default function FoodCard({navigation, ...props}) {
                         <Text
                             style=
                             {{
-                                fontSize: "21pt", 
+                                fontSize: 21, 
                                 color: "rgb(247,80,0)", 
                                 fontWeight: "600",
-                                paddingHorizontal: "15pt"
+                                paddingHorizontal: 15
                                 
                             }}
                         >
@@ -177,12 +173,12 @@ export default function FoodCard({navigation, ...props}) {
                         {
                             return  (
                                 <TouchableOpacity style={{
-                                    marginRight:"30",   
-                                    borderRadius: "10", 
+                                    marginRight:30,   
+                                    borderRadius: 10, 
                                     overflow: "hidden",
                                     width: "75%",  
-                                    marginHorizontal: "15pt",
-                                    borderRadius: "30",
+                                    marginHorizontal: 15,
+                                    borderRadius: 30,
                                 }}
                                     onPress = {() => navigation.navigate("RestaurantDetail", 
                                     {
@@ -213,10 +209,10 @@ export default function FoodCard({navigation, ...props}) {
                         <Text
                             style=
                             {{
-                                fontSize: "21pt", 
+                                fontSize: 21, 
                                 color: "rgb(247,80,0)", 
                                 fontWeight: "600",
-                                paddingHorizontal: "15pt",
+                                paddingHorizontal: 15,
                                 
                             }}
                         >
@@ -234,12 +230,12 @@ export default function FoodCard({navigation, ...props}) {
                         {
                             return  (
                                 <TouchableOpacity style={{
-                                    marginRight:"30",   
-                                    borderRadius: "10", 
+                                    marginRight:30,   
+                                    borderRadius: 10, 
                                     overflow: "hidden",
                                     width: "75%",  
-                                    marginHorizontal: "15pt",
-                                    borderRadius: "30",
+                                    marginHorizontal: 15,
+                                    borderRadius: 30,
                                 }}
                                     onPress = {() => navigation.navigate("RestaurantDetail", 
                                     {
@@ -299,21 +295,21 @@ const FoodInfo = (props) => (
     <View>
         <Text style={{
             fontWeight:"bold", 
-        fontSize: "16pt"}}>{props.foodName}</Text>
+        fontSize: 16}}>{props.foodName}</Text>
         <View style = {{flexDirection: "row"}}>
             <Text style = {{
-            fontSize: "12pt",
+            fontSize: 12,
             color: "rgb(84, 84, 84)",    
             }}>{props.price}</Text>
 
             <FontAwesome5 name = "utensils"  style = {{
-                marginLeft:"10pt", 
+                marginLeft:10, 
                 color: "rgb(247, 80, 80)"}} />
             <FontAwesome5 name = "shopping-basket" style = {{
-                marginLeft: "3pt", 
+                marginLeft: 3, 
                 color: "rgb(247, 80, 80)"}} /> 
             <FontAwesome5 name = "motorcycle" style = {{
-                marginLeft: "3pt", 
+                marginLeft: 3, 
                 color: "rgb(84, 84, 84)"}} /> 
         </View>
         
@@ -332,7 +328,7 @@ const FoodInfo = (props) => (
     >   
         <Ionicons name="star" style = {{
             color: "rgb(252, 161, 24)", 
-            size :"22pt", 
+            size :22, 
         }}/>
         <Text style = {{ fontWeight:"600"}}>{props.rating}</Text>
     </View>
@@ -340,8 +336,10 @@ const FoodInfo = (props) => (
 )
 
 const FoodHeader= (props) => (
-    <View><Text style = {{
-        fontSize: "18pt",
+    <View>
+        <Text style = {{
+        fontSize: 18,
         fontWeight: "900", 
-    }}>{props.restaurantName}</Text></View>
+    }}>{props.restaurantName}</Text>
+    </View>
 )

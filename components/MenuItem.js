@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
 
   titleStyle: {
-    fontSize: "16pt",
+    fontSize: 16,
     fontWeight: "600",
   },
 });
@@ -31,13 +31,13 @@ export default function MenuItem(props) {
                 if(food.restaurantName === name)
                 {
                     return (
-                             <View key = {index}>
-                        <View style={styles.menuItemStyle}>
-                            <FoodInfo food = {food} /> 
-                            <FoodImage food = {food} /> 
-                        </View>
-                        <Divider width={0.5} orientation=' ="vertical' /> 
-                    </View>
+                            <View key = {index}>
+                                <View style={styles.menuItemStyle}>
+                                        <FoodInfo food = {food} /> 
+                                        <FoodImage food = {food} /> 
+                                </View>
+                                <Divider width={0.5} orientation=' ="vertical' /> 
+                            </View>
                     ); 
                
                 }
@@ -60,21 +60,21 @@ const FoodInfo = (props) =>  (
         <Text style = {styles.titleStyle}>{props.food.foodName}</Text>
         <Text style = 
         {{
-          fontSize: "11pt",  
+          fontSize: 11,  
         }}>{props.food.description}</Text>
         <View style={{flexDirection: "row"}}>
-            <Text style = {{fontSize: "14pt"}}>{props.food.price}</Text>
+            <Text style = {{fontSize: 14}}>{props.food.price}</Text>
             <FontAwesome5 
                 name = "plus-square"
                 size = "22pt"
                  style = {{
-                     paddingLeft: "15pt",
+                     paddingLeft: 15,
                      color: "rgb(247, 80, 0)", 
                  }}
             /> 
             <Ionicons  style = {{
                 color: "green",
-                paddingLeft: "100pt", 
+                paddingLeft: 100, 
                 }} name = "ios-leaf"/>
             <View style = {{
                 flexDirection: "row", 
@@ -82,11 +82,11 @@ const FoodInfo = (props) =>  (
                 <Ionicons style=
                 {{
                     color: "rgb(255,134,22)",
-                    paddingLeft: "3pt", 
+                    paddingLeft: 3, 
                 }} name = "ios-flame"/>
                 <Text style = 
                 {{
-                    fontSize: "12pt", paddingLeft: "3pt"
+                    fontSize: 12, paddingLeft: 3
                 }}>{props.food.calories} kcal</Text>
             </View>
         </View>

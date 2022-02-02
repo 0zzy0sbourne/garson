@@ -33,7 +33,7 @@ const RestaurantImage = (props) => (
 const RestaurantTitle = (props) => (
     <Text style = {{
        
-        fontSize: "24pt",
+        fontSize: 24,
         fontWeight: "600", 
         marginTop: 10,
         marginHorizontal: 15,  

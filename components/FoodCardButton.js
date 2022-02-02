@@ -5,9 +5,9 @@ import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 export default function FoodCardButton() {
     return (
         <SafeAreaView style = {{
-            marginTop: "5pt",
+            marginTop: 5,
               backgroundColor: "black", 
-            paddingVertical: "4pt", 
+            paddingVertical: 4, 
             paddingHorizontal: 16,
             borderRadius: 30, 
         }}>
@@ -21,7 +21,7 @@ export default function FoodCardButton() {
                     marginBottom: 3, 
                     alignSelf: "center",
                     color:"white",
-                    marginRight:"5pt",  
+                    marginRight:5,  
                 }} /> 
                 <Text style = {{
                 color: "white",

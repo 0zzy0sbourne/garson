@@ -7,7 +7,7 @@ export default function HeaderButtons(props) {
         <TouchableOpacity 
         style = {{
             backgroundColor: props.activeTab === props.text ? 'rgb( 247, 80, 0)' : "rgb (189,189, 189, 0.8)", 
-            paddingVertical: "4pt", 
+            paddingVertical: 4, 
             paddingHorizontal: 16,
             borderRadius: 30, 
         }}

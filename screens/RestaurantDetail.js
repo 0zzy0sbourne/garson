@@ -17,9 +17,9 @@ export default function RestaurantDetail({route}) {
                     width: "auto", 
                     height: "auto",  
                     flexDirection: "row", 
-                    marginTop: "10px", 
+                    marginTop: 10, 
                     alignSelf: "center",
-                    paddingVertical: "6pt",
+                    paddingVertical: 6,
                     }}>
                 <Text 
                 style = {{

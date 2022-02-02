@@ -1,8 +1,7 @@
 import React from 'react'
-import { View, Text, Image, ScrollView } from 'react-native'
-import { TouchableOpacity } from 'react-native-web'
+import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native'
 
-const categories = [
+const Mategories = [
     {
     image: require("../assets/images/fast-food.png"), 
     text: "Fast Food",
@@ -26,19 +25,19 @@ export default function Categories() {
 
     return (
     <View style = {{
-        marginTop: "50",
+        marginTop: 50,
         backgroundColor: "#fff", 
         paddingLeft: 20, 
         paddingVertical: 40,
         paddingHorizontal: 40, 
     }}>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            {categories.map((category, index) => (
+            {Mategories.map((category, index) => (
             
             <TouchableOpacity>
                 <View style = {{
                 alignItems: "center",
-                marginRight:"30",
+                marginRight:30,
                 paddingHorizontal: 30, 
                 }}>
                 <Image source = {category.image} style ={{
@@ -46,7 +45,7 @@ export default function Categories() {
                     height: 40, 
                     resizeMode: "contain", 
                 }}/>
-                <Text style = {{fontSize: "12"}}>
+                <Text style = {{fontSize: 12}}>
                     {category .text}
                 </Text>
                 </View> 

@@ -1,15 +1,14 @@
 import React from 'react'
-import { View, Text, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, ScrollView ,TouchableOpacity} from 'react-native'
 import { Divider } from 'react-native-elements';
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5"; 
-import { TouchableOpacity } from 'react-native-web';
 
 
 
 export default function MenuNav() {
     return (
         <View style = {{
-            marginTop: "5",
+            marginTop: 5,
             backgroundColor: "#fff", 
             paddingLeft: 20, 
             paddingVertical: 4,
@@ -19,54 +18,54 @@ export default function MenuNav() {
                 
                     <View style = {{
                     alignItems: "center",
-                    marginRight:"30",
+                    marginRight:30,
                     paddingHorizontal: 3, 
                     flexDirection: "row",
                     }}>
                     <TouchableOpacity>
-                        <Text style = {{fontSize: "12"}}>
+                        <Text style = {{fontSize: 12}}>
                         NAV BAR 1
                     </Text>
                     </TouchableOpacity>
                     
                     <TouchableOpacity>
-                        <Text style = {{fontSize: "12", marginLeft:"10pt"}}>
+                        <Text style = {{fontSize: 12, marginLeft:10}}>
                         NAV BAR 2
                     </Text>
                     </TouchableOpacity>
 
                      <TouchableOpacity>
-                        <Text style = {{fontSize: "12", marginLeft:"10pt"}}>
+                        <Text style = {{fontSize: 12, marginLeft:10}}>
                         NAV BAR 3
                     </Text>
                     </TouchableOpacity>
 
                      <TouchableOpacity>
-                        <Text style = {{fontSize: "12", marginLeft:"10pt"}}>
+                        <Text style = {{fontSize: 12, marginLeft:10}}>
                         NAV BAR 4
                     </Text>
                     </TouchableOpacity>
 
                      <TouchableOpacity>
-                        <Text style = {{fontSize: "12", marginLeft:"10pt"}}>
+                        <Text style = {{fontSize: 12, marginLeft:10}}>
                         NAV BAR 5
                     </Text>
                     </TouchableOpacity>
 
                      <TouchableOpacity>
-                        <Text style = {{fontSize: "12", marginLeft:"10pt"}}>
+                        <Text style = {{fontSize: 12, marginLeft:10}}>
                         NAV BAR 6
                     </Text>
                     </TouchableOpacity>
 
                      <TouchableOpacity>
-                        <Text style = {{fontSize: "12", marginLeft:"10pt"}}>
+                        <Text style = {{fontSize: 12, marginLeft:10}}>
                         NAV BAR 7
                     </Text>
                     </TouchableOpacity>
                     
                      <TouchableOpacity>
-                        <Text style = {{fontSize: "12", marginLeft:"10pt"}}>
+                        <Text style = {{fontSize: 12, marginLeft:10}}>
                         NAV BAR 8
                     </Text>
                     </TouchableOpacity>
